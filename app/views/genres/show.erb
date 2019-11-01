@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<h1><%=@genre.name.upcase%></h1>
+<ul>
+<li>Genre Artists : <%@genre.artists.each do |artist|%>
+    <a href='/artists/<%=artist.slug%>'><%=artist.name%></a>
+    <%end%></li>
+<li>Genre Songs : <%@genre.songs.each do |song|%>
+    <a href='/songs/<%=song.slug%>'><%=song.name%></a>
+    <%end%></li>
+
+</html>
